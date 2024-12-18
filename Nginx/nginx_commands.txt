@@ -1,0 +1,145 @@
+To start 
+---
+vagrant up
+========================
+Status
+---
+vagrant status  
+========================
+Halt Vagrant
+---
+vagrant halt
+========================
+To Destroy
+---
+vagrant destroy
+========================
+To connect to a vagrant
+---
+vagrant ssh nginx-handbook-box
+
+vagrant ssh <name>
+========================
+
+
+
+to install nginx
+---
+sudo apt install nginx -y
+============
+start nginx
+---
+sudo systemctl start nginx
+============
+USE NEW nginx conf
+---
+sudo nginx -t
+============
+Reload nginx
+---
+sudo nginx -s reload
+
+(stop, quit, reload and reopen)
+
+
+# delete the old files
+---
+sudo rm /var/log/nginx/access.log /var/log/nginx/error.log
+
+# create new files
+---
+sudo touch /var/log/nginx/access.log /var/log/nginx/error.log
+
+# reopen the log files
+---
+sudo nginx -s reopen
+
+
+DEFAULT IP              = http://192.168.20.20
+NGINX FOLDER            = /etc/nginx
+NGINX CONFIG FILE       = /etc/nginx/nginx.conf
+
+
+
+/\/\/\/\/\/\ DOC DOC DOC /\/\/\/\/\/\/\
+
+
+File Name : Vagrantfile
+"
+Vagrant.configure("2") do |config|
+
+    config.vm.hostname = "nginx-handbook-box"
+  
+    config.vm.box = "ubuntu/focal64"
+  
+    config.vm.define "nginx-handbook-box"
+  
+    config.vm.network "private_network", ip: "192.168.20.20"
+  
+    config.vm.provider "virtualbox" do |vb|
+      vb.cpus = 1
+      vb.memory = "1024"
+      vb.name = "nginx-handbook"
+    end
+  
+  end 
+"
+
+
+MAIN blocks
+
+A block directive capable of containing other directives inside it is called a context, that is events, http and so on. There are four core contexts in NGINX:
+
+events { } – The events context is used for setting global configuration regarding how NGINX is going to handle requests on a general level. There can be only one events context in a valid configuration file.
+http { } – Evident by the name, http context is used for defining configuration regarding how the server is going to handle HTTP and HTTPS requests, specifically. There can be only one http context in a valid configuration file.
+server { } – The server context is nested inside the http context and used for configuring specific virtual servers within a single host. There can be multiple server contexts in a valid configuration file nested inside the http context. Each server context is considered a virtual host.
+main – The main context is the configuration file itself. Anything written outside of the three previously mentioned contexts is on the main context.
+
+The listen directive is one of the ways to identify the correct server context within a configuration. Consider the following scenario:
+
+
+Location Matches :::
+---------------------
+
+location /name {}
+
+location = /name {}           (To perform an exact match)
+
+location ~ /name[0-9] {}      (perform a regular expression match)
+
+location ~* /name[0-9] {}     (case insensitive)
+
+
+location ~* /name[0-9] >	location /name8    (a regex match has more priority than a prefix match)
+
+location ^~ /name8  > location ~* /name[0-9]    (preferential prefix match)
+
+MATCH	                  MODIFIER
+Exact	                      =
+Preferential Prefix	        ^~
+REGEX	                    ~ or ~*
+Prefix	                    None
+
+
+Variables in NGINX :::
+----------------------
+syntax  :
+set $<variable_name> <variable_value>;
+
+examples
+# set name "Farhan"
+# set age 25
+# set is_working true
+
+inbuilt variables
+------------------
+return 200 "Host - $host\nURI - $uri\nArgs - $args\n";
+example
+##
+# curl http://nginx-handbook.test/user?name=Farhan
+
+# Host - nginx-handbook.test
+# URI - /user
+# Args - name=Farhan
+##
+

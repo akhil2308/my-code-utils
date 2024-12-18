@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wavservice;
+
+service WavProcessor {
+  rpc ProcessWav(WavRequest) returns (stream WavResponse);
+}
+
+message WavRequest {
+  string wav_data_base64 = 1;
+  string task_type = 2;
+}
+
+message WavResponse {
+  string result = 1;
+}

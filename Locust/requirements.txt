@@ -1,0 +1,4 @@
+locust==2.29.1
+grpcio==1.66.1
+grpcio-tools==1.66.1
+grpc-interceptor==0.15.4
