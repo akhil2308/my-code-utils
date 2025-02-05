@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: false  # Required for pushing changes
+          persist-credentials: true  # Required for pushing changes
 
       - name: Generate directory tree
         run: |
