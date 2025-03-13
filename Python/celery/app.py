@@ -8,3 +8,4 @@ app = Celery('test_app',
 @app.task(name="send_email")
 def send_email(args):
     print(f"Sending email: {args}")
+    # celery -A test_app worker --loglevel=info
