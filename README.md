@@ -31,6 +31,8 @@
 ├── Python
 │   ├── async
 │   │   └── async_batch_requests.py
+│   ├── celery
+│   │   └── sqlalchemy_scheduler.py
 │   ├── fastapi
 │   │   └── apscheduler_cron.py
 │   ├── kafka
@@ -51,7 +53,7 @@
 ├── README.md
 └── tree.txt
 
-20 directories, 22 files
+21 directories, 23 files
 ```
 <!-- TREE_END -->
 
