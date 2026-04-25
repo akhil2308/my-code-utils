@@ -12,8 +12,14 @@
 ├── Docker
 │   ├── kafka-docker
 │   │   └── docker-compose.yml
-│   └── milvus-docker
-│       └── milvus-standalone-docker-compose.yml
+│   ├── milvus-docker
+│   │   └── milvus-standalone-docker-compose.yml
+│   ├── pgvector-docker
+│   │   └── docker-compose.yml
+│   ├── postgres-docker
+│   │   └── docker-compose.yml
+│   └── redis-docker
+│       └── docker-compose.yml
 ├── Git
 │   ├── git rebase.md
 │   └── git-cheat-sheet-education.pdf
@@ -54,7 +60,7 @@
 ├── README.md
 └── tree.txt
 
-21 directories, 24 files
+24 directories, 27 files
 ```
 <!-- TREE_END -->
 
