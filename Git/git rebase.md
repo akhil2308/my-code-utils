@@ -87,6 +87,15 @@ Here is a step-by-step guide for rebasing with conflict resolution:
    git rebase --continue
    ```
 
+5. **Push the rebased branch:**
+   After a rebase, the commit history is rewritten, so you need to force push the branch.
+
+   ```bash
+   git push --force-with-lease
+   ```
+
+   > `--force-with-lease` is safer than `--force` because it prevents overwriting remote changes made by others.
+
 ### Setting a Default Reconciliation Strategy
 To avoid specifying the reconciliation strategy every time, you can set a default using `git config`.
 
