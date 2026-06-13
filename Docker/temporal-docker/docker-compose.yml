@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  temporal-postgres:
+    image: postgres:16
+    container_name: temporal-postgres
+    profiles: ["postgres", "full"]
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: temporal
+      POSTGRES_PASSWORD: temporal
+    ports:
+      - 5433:5432
+    volumes:
+      - temporal_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U temporal"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  temporal:
+    image: temporalio/auto-setup:1.25.2
+    container_name: temporal
+    profiles: ["temporal", "postgres", "full"]
+    restart: unless-stopped
+    environment:
+      - DB=postgres12
+      - DB_PORT=${POSTGRES_PORT:-5432}
+      - POSTGRES_USER=${POSTGRES_USER:-temporal}
+      - POSTGRES_PWD=${POSTGRES_PWD:-temporal}
+      - POSTGRES_SEEDS=${POSTGRES_SEEDS:-temporal-postgres}
+    ports:
+      - 7233:7233
+    healthcheck:
+      test: ["CMD", "tctl", "--address", "temporal:7233", "cluster", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  temporal-ui:
+    image: temporalio/ui:2.32.0
+    container_name: temporal-ui
+    profiles: ["temporal", "postgres", "full"]
+    restart: unless-stopped
+    depends_on:
+      - temporal
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:3000
+    ports:
+      - 8080:8080
+
+volumes:
+  temporal_postgres_data:
