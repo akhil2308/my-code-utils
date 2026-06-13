@@ -18,7 +18,9 @@
 │   │   └── docker-compose.yml
 │   ├── postgres-docker
 │   │   └── docker-compose.yml
-│   └── redis-docker
+│   ├── redis-docker
+│   │   └── docker-compose.yml
+│   └── temporal-docker
 │       └── docker-compose.yml
 ├── Git
 │   ├── git rebase.md
@@ -52,15 +54,23 @@
 │   ├── sockets
 │   │   ├── client_side.py
 │   │   └── server_side.py
-│   └── sqlalchemy
-│       ├── database.py
-│       └── standalone_database.py
+│   ├── sqlalchemy
+│   │   ├── database.py
+│   │   └── standalone_database.py
+│   └── temporal
+│       ├── README.md
+│       ├── activities.py
+│       ├── main.py
+│       ├── pyproject.toml
+│       ├── starter.py
+│       ├── worker.py
+│       └── workflows.py
 ├── SQL
 │   └── SQL-cheat-sheet.pdf
 ├── README.md
 └── tree.txt
 
-24 directories, 27 files
+26 directories, 35 files
 ```
 <!-- TREE_END -->
 
