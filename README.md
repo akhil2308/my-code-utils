@@ -12,10 +12,14 @@
 ├── Bash
 │   └── bash-cheat-sheet.md
 ├── Docker
+│   ├── elasticsearch-kibana-docker
+│   │   └── docker-compose.yml
 │   ├── kafka-docker
 │   │   └── docker-compose.yml
 │   ├── milvus-docker
 │   │   └── milvus-standalone-docker-compose.yml
+│   ├── minio-docker
+│   │   └── docker-compose.yml
 │   ├── pgvector-docker
 │   │   └── docker-compose.yml
 │   ├── postgres-docker
@@ -35,12 +39,18 @@
 │   ├── git-cheat-sheet.md
 │   └── git-undo.md
 ├── Kubernetes
+│   ├── manifests
+│   │   ├── deployment.yaml
+│   │   ├── ingress.yaml
+│   │   └── service.yaml
 │   └── kubectl-cheat-sheet.md
 ├── Linux
 │   ├── curl-cheat-sheet.md
+│   ├── jq-cheat-sheet.md
 │   ├── linux-commands.md
 │   ├── regex-cheat-sheet.md
-│   └── tmux-cheat-sheet.md
+│   ├── tmux-cheat-sheet.md
+│   └── vim-cheat-sheet.md
 ├── Locust
 │   ├── locust_api_scripts
 │   │   └── sample_perf.py
@@ -51,6 +61,7 @@
 │   ├── README.md
 │   └── requirements.txt
 ├── Nginx
+│   ├── nginx-cheat-sheet.md
 │   └── nginx_commands.txt
 ├── Postgres
 │   └── psql-cheat-sheet.md
@@ -61,7 +72,9 @@
 │   │   ├── app.py
 │   │   └── sqlalchemy_scheduler.py
 │   ├── fastapi
-│   │   └── apscheduler_cron.py
+│   │   ├── apscheduler_cron.py
+│   │   ├── deps.py
+│   │   └── middleware.py
 │   ├── grpc
 │   │   ├── README.md
 │   │   ├── client.py
@@ -90,11 +103,15 @@
 │   │   ├── starter.py
 │   │   ├── worker.py
 │   │   └── workflows.py
+│   ├── testing
+│   │   ├── conftest.py
+│   │   └── test_example.py
 │   └── utils
 │       ├── env_config.py
 │       ├── http_client.py
 │       ├── logging_setup.py
 │       ├── paginator.py
+│       ├── rate_limiter.py
 │       ├── retry_backoff.py
 │       └── timer.py
 ├── SQL
@@ -110,7 +127,7 @@
 ├── README.md
 └── tree.txt
 
-38 directories, 63 files
+42 directories, 76 files
 ```
 <!-- TREE_END -->
 
