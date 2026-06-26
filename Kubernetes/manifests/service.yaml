@@ -1,0 +1,16 @@
+# Service: stable virtual IP + DNS name that load-balances across the pods
+# matching `selector`. Pods are ephemeral; the Service is not.
+#   kubectl apply -f service.yaml
+#   reachable in-cluster at: http://demo-app  (or demo-app.<namespace>.svc)
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-app
+spec:
+  type: ClusterIP            # internal only; Ingress exposes it externally
+  selector:
+    app: demo-app            # routes to pods with this label
+  ports:
+    - name: http
+      port: 80               # service port
+      targetPort: 80         # container port

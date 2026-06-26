@@ -1,0 +1,45 @@
+# Deployment: runs N replicas of a stateless app, restarts crashed pods.
+#   kubectl apply -f deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+  labels:
+    app: demo-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-app          # must match template labels below
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+        - name: demo-app
+          image: nginx:1.27   # replace with your image
+          ports:
+            - containerPort: 80
+          env:
+            - name: ENV
+              value: "production"
+          resources:
+            requests:          # scheduler reserves this
+              cpu: "100m"
+              memory: "128Mi"
+            limits:            # pod is throttled/killed past this
+              cpu: "500m"
+              memory: "256Mi"
+          readinessProbe:      # ready to receive traffic?
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:       # restart if this fails
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
