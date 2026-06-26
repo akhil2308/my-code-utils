@@ -60,21 +60,21 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 
 | File | Topic |
 |---|---|
+| [README.md](Locust/README.md) | README.md |
 | [sample_perf.py](Locust/locust_api_scripts/sample_perf.py) | sample_perf.py |
 | [dhwani_model_perf.py](Locust/locust_grpc_scripts/dhwani_model_perf.py) | dhwani_model_perf.py |
-| [dhwani_model_pb2_grpc.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2_grpc.py) | dhwani_model_pb2_grpc.py |
-| [dhwani_model_pb2.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2.py) | dhwani_model_pb2.py |
 | [dhwani_model.proto](Locust/locust_grpc_scripts/grpc_proto/dhwani_model.proto) | dhwani_model.proto |
+| [dhwani_model_pb2.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2.py) | dhwani_model_pb2.py |
+| [dhwani_model_pb2_grpc.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2_grpc.py) | dhwani_model_pb2_grpc.py |
 | [grpc_user.py](Locust/locust_grpc_scripts/grpc_user/grpc_user.py) | grpc_user.py |
-| [README.md](Locust/README.md) | README.md |
 | [requirements.txt](Locust/requirements.txt) | requirements.txt |
 
 ## Nginx
 
 | File | Topic |
 |---|---|
-| [nginx_commands.txt](Nginx/nginx_commands.txt) | nginx_commands.txt |
 | [nginx-cheat-sheet.md](Nginx/nginx-cheat-sheet.md) | Nginx Cheat Sheet |
+| [nginx_commands.txt](Nginx/nginx_commands.txt) | nginx_commands.txt |
 
 ## Postgres
 
@@ -92,12 +92,12 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | [apscheduler_cron.py](Python/fastapi/apscheduler_cron.py) | apscheduler_cron.py |
 | [deps.py](Python/fastapi/deps.py) | deps.py |
 | [middleware.py](Python/fastapi/middleware.py) | middleware.py |
+| [README.md](Python/grpc/README.md) | Minimal gRPC (Python) |
 | [client.py](Python/grpc/client.py) | client.py |
 | [greeter.proto](Python/grpc/greeter.proto) | greeter.proto |
-| [README.md](Python/grpc/README.md) | Minimal gRPC (Python) |
 | [server.py](Python/grpc/server.py) | server.py |
-| [kafka_producer.py](Python/kafka/kafka_producer.py) | kafka_producer.py |
 | [kafka-consumer.py](Python/kafka/kafka-consumer.py) | kafka-consumer.py |
+| [kafka_producer.py](Python/kafka/kafka_producer.py) | kafka_producer.py |
 | [redis_client.py](Python/redis/redis_client.py) | redis_client.py |
 | [s3_client.py](Python/s3/s3_client.py) | s3_client.py |
 | [send_email.py](Python/send_email/send_email.py) | send_email.py |
@@ -105,10 +105,10 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | [server_side.py](Python/sockets/server_side.py) | server_side.py |
 | [database.py](Python/sqlalchemy/database.py) | database.py |
 | [standalone_database.py](Python/sqlalchemy/standalone_database.py) | standalone_database.py |
+| [README.md](Python/temporal/README.md) | Temporal Sample |
 | [activities.py](Python/temporal/activities.py) | activities.py |
 | [main.py](Python/temporal/main.py) | main.py |
 | [pyproject.toml](Python/temporal/pyproject.toml) | pyproject.toml |
-| [README.md](Python/temporal/README.md) | Temporal Sample |
 | [starter.py](Python/temporal/starter.py) | starter.py |
 | [worker.py](Python/temporal/worker.py) | worker.py |
 | [workflows.py](Python/temporal/workflows.py) | workflows.py |
@@ -126,24 +126,15 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 
 | File | Topic |
 |---|---|
+| [README.md](Reference/cs-fundamentals/README.md) | CS fundamentals |
 | [big-o.md](Reference/cs-fundamentals/big-o.md) | Big-O — the stuff I keep re-deriving |
 | [concurrency.md](Reference/cs-fundamentals/concurrency.md) | Concurrency mental models |
 | [patterns.md](Reference/cs-fundamentals/patterns.md) | Algorithm patterns I keep re-deriving |
-| [README.md](Reference/cs-fundamentals/README.md) | CS fundamentals |
+| [README.md](Reference/system-design/README.md) | System design notes |
 | [caching.md](Reference/system-design/caching.md) | Caching: patterns and invalidation |
 | [id-generation.md](Reference/system-design/id-generation.md) | Distributed ID generation |
 | [kafka-vs-task-queue.md](Reference/system-design/kafka-vs-task-queue.md) | When to use Kafka vs a task queue |
 | [rate-limiter.md](Reference/system-design/rate-limiter.md) | How I'd design a rate limiter |
-| [README.md](Reference/system-design/README.md) | System design notes |
-
-## Shell
-
-| File | Topic |
-|---|---|
-| [aliases.sh](Shell/aliases.sh) | aliases.sh |
-| [functions.sh](Shell/functions.sh) | functions.sh |
-| [README.md](Shell/README.md) | Shell |
-| [setup.sh](Shell/setup.sh) | setup.sh |
 
 ## SQL
 
@@ -156,6 +147,15 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | File | Topic |
 |---|---|
 | [ssh-cheat-sheet.md](SSH/ssh-cheat-sheet.md) | SSH Cheat Sheet |
+
+## Shell
+
+| File | Topic |
+|---|---|
+| [README.md](Shell/README.md) | Shell |
+| [aliases.sh](Shell/aliases.sh) | aliases.sh |
+| [functions.sh](Shell/functions.sh) | functions.sh |
+| [setup.sh](Shell/setup.sh) | setup.sh |
 
 ## Templates
 

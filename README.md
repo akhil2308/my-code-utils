@@ -114,20 +114,40 @@
 │       ├── rate_limiter.py
 │       ├── retry_backoff.py
 │       └── timer.py
+├── Reference
+│   ├── cs-fundamentals
+│   │   ├── README.md
+│   │   ├── big-o.md
+│   │   ├── concurrency.md
+│   │   └── patterns.md
+│   └── system-design
+│       ├── README.md
+│       ├── caching.md
+│       ├── id-generation.md
+│       ├── kafka-vs-task-queue.md
+│       └── rate-limiter.md
 ├── SQL
 │   └── SQL-cheat-sheet.pdf
 ├── SSH
 │   └── ssh-cheat-sheet.md
+├── Shell
+│   ├── README.md
+│   ├── aliases.sh
+│   ├── functions.sh
+│   └── setup.sh
 ├── Templates
 │   ├── workflows
 │   │   ├── ci.yml
 │   │   └── publish.yml
 │   ├── Makefile
 │   └── pyproject.toml
+├── INDEX.md
 ├── README.md
+├── gen-index.sh
+├── search.sh
 └── tree.txt
 
-42 directories, 76 files
+46 directories, 92 files
 ```
 <!-- TREE_END -->
 
