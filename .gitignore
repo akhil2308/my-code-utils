@@ -23,6 +23,10 @@ env/
 # uv
 .uv/
 
+# Generated gRPC stubs
+*_pb2.py
+*_pb2_grpc.py
+
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb
