@@ -34,9 +34,9 @@
 │   │   └── docker-compose.yml
 │   └── docker-commands.md
 ├── Git
-│   ├── git rebase.md
 │   ├── git-cheat-sheet-education.pdf
 │   ├── git-cheat-sheet.md
+│   ├── git-rebase.md
 │   └── git-undo.md
 ├── Kubernetes
 │   ├── manifests
@@ -61,8 +61,7 @@
 │   ├── README.md
 │   └── requirements.txt
 ├── Nginx
-│   ├── nginx-cheat-sheet.md
-│   └── nginx_commands.txt
+│   └── nginx-cheat-sheet.md
 ├── Postgres
 │   └── psql-cheat-sheet.md
 ├── Python
@@ -81,7 +80,7 @@
 │   │   ├── greeter.proto
 │   │   └── server.py
 │   ├── kafka
-│   │   ├── kafka-consumer.py
+│   │   ├── kafka_consumer.py
 │   │   └── kafka_producer.py
 │   ├── redis
 │   │   └── redis_client.py
@@ -147,7 +146,7 @@
 ├── search.sh
 └── tree.txt
 
-46 directories, 92 files
+46 directories, 91 files
 ```
 <!-- TREE_END -->
 

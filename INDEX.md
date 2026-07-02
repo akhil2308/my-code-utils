@@ -31,9 +31,9 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 
 | File | Topic |
 |---|---|
-| [git rebase.md](Git/git rebase.md) | Resolve conflicts if any |
 | [git-cheat-sheet-education.pdf](Git/git-cheat-sheet-education.pdf) | git-cheat-sheet-education.pdf |
 | [git-cheat-sheet.md](Git/git-cheat-sheet.md) | Git Cheat Sheet |
+| [git-rebase.md](Git/git-rebase.md) | Resolve conflicts if any |
 | [git-undo.md](Git/git-undo.md) | Git "Oh No" Recipes |
 
 ## Kubernetes
@@ -64,8 +64,6 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | [sample_perf.py](Locust/locust_api_scripts/sample_perf.py) | sample_perf.py |
 | [dhwani_model_perf.py](Locust/locust_grpc_scripts/dhwani_model_perf.py) | dhwani_model_perf.py |
 | [dhwani_model.proto](Locust/locust_grpc_scripts/grpc_proto/dhwani_model.proto) | dhwani_model.proto |
-| [dhwani_model_pb2.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2.py) | dhwani_model_pb2.py |
-| [dhwani_model_pb2_grpc.py](Locust/locust_grpc_scripts/grpc_proto/dhwani_model_pb2_grpc.py) | dhwani_model_pb2_grpc.py |
 | [grpc_user.py](Locust/locust_grpc_scripts/grpc_user/grpc_user.py) | grpc_user.py |
 | [requirements.txt](Locust/requirements.txt) | requirements.txt |
 
@@ -74,7 +72,6 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | File | Topic |
 |---|---|
 | [nginx-cheat-sheet.md](Nginx/nginx-cheat-sheet.md) | Nginx Cheat Sheet |
-| [nginx_commands.txt](Nginx/nginx_commands.txt) | nginx_commands.txt |
 
 ## Postgres
 
@@ -96,7 +93,7 @@ Fuzzy-search these from the terminal with [`search.sh`](search.sh).
 | [client.py](Python/grpc/client.py) | client.py |
 | [greeter.proto](Python/grpc/greeter.proto) | greeter.proto |
 | [server.py](Python/grpc/server.py) | server.py |
-| [kafka-consumer.py](Python/kafka/kafka-consumer.py) | kafka-consumer.py |
+| [kafka_consumer.py](Python/kafka/kafka_consumer.py) | kafka_consumer.py |
 | [kafka_producer.py](Python/kafka/kafka_producer.py) | kafka_producer.py |
 | [redis_client.py](Python/redis/redis_client.py) | redis_client.py |
 | [s3_client.py](Python/s3/s3_client.py) | s3_client.py |
